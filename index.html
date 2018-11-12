@@ -27,12 +27,13 @@
 <div dayButtons>
   <center>
 
-    <button type="button" onclick="alert('Hello world!')">Monday</button>
-    <button type="button" onclick="alert('Hello world!')">Tuesday</button>
-    <button type="button" onclick="alert('Hello world!')">Wednesday</button>
-    <button type="button" onclick="alert('Hello world!')">Thursday</button>
-    <button type="button" onclick="alert('Hello world!')">Friday</button>
-    <button type="button" onclick="alert('Hello world!')">Saturday</button>
+    <button type="button" onclick="changeText('Monday')">Monday</button>
+    <button type="button" onclick="changeText('Tuesday')">Tuesday</button>
+    <button type="button" onclick="changeText('Wednesday')">Wednesday</button>
+    <button type="button" onclick="changeText('Thursday')">Thursday</button>
+    <button type="button" onclick="changeText('Friday')">Friday</button>
+    <button type="button" onclick="changeText('Saturday')">Saturday</button>
+
 
   </center>
 </div>
@@ -54,6 +55,12 @@
 
       var daySpan = document.getElementById("toGetDay");
       daySpan.innerText = dayName;
+
+      function changeText(toGetDay)
+      {
+        document.getElementById('toGetDay').innerHTML = toGetDay
+      }
+      
     </script>
 
     </body>
