@@ -1,7 +1,9 @@
 <html>
   <head>
+
     <title> ClassRVooms</title>
       <link rel="shortcut icon" type="image/jpeg" href="favicon.jpeg">
+
   </head>
 
   <body>
@@ -9,7 +11,7 @@
     <br></br>
 
     <h1> <center>
-      Raritan Valley Fall 2018 *Day* Classes
+      Raritan Valley Fall 2018 <span id="toGetDay"></span> Classes
     </h1> </center>
 
     <div>
@@ -20,5 +22,15 @@
     </center>
     </div>
 
+    <script>
+      var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var d = new Date();
+      var dayName = days[d.getDay()];
+
+      var daySpan = document.getElementById("toGetDay");
+      daySpan.innerText = dayName;
+    </script>
+
+    </body>
 
 </html>
